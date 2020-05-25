@@ -1,0 +1,31 @@
+{
+  "name": "burger_logger",
+  "version": "1.0.0",
+  "description": "Logger to track what kind of burgers to eat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikemous/burger_logger.git"
+  },
+  "keywords": [
+    "burger",
+    "logger",
+    "express",
+    "handlebars"
+  ],
+  "author": "Ikemous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikemous/burger_logger/issues"
+  },
+  "homepage": "https://github.com/ikemous/burger_logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}
