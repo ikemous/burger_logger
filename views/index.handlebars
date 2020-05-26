@@ -1,1 +1,13 @@
-<h1>{{title}}</h1>
+<h1>BURGER CHOMPER</h1>
+
+<ul>
+    {{#each burgers}}
+        <li>Burger Choice: {{burger_name}}</li>
+        <li>Eaten: {{devoured}}</li>
+    {{/each}}
+</ul>
+
+<form method="POST">
+    <textarea></textarea>
+    <button>ENTER BURGER</button>
+</form>

@@ -4,10 +4,23 @@ const burger = require("../models/burger.js")
 const router = express.Router();  
 
 router.get("/", (req,res)=>{
-    const obj = {
-        title: "test"
-    };
-    res.render("index", obj);
+
+    burger.selectall(data=>{
+
+        const burgers = data.map(burger => {
+            const currentBurger = {
+                id: burger.id,
+                burger_name: burger.burger_name,
+                devoured: burger.devoured
+            };
+
+            return currentBurger;
+        });
+        const obj = { burgers };
+        
+        res.render("index", obj);
+    });
+
 });
 
 module.exports = router;
