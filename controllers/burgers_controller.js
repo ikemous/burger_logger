@@ -23,4 +23,13 @@ router.get("/", (req,res)=>{
 
 });
 
+router.post("/", (req,res)=>{
+    // console.log(req.body.burger_name);
+    const newBurger = {burger_name: req.body.burger_name};
+    burger.insertOne(newBurger, result=>{
+        res.json({id: result.insertId})
+    });
+    // console.log(req);
+});
+
 module.exports = router;

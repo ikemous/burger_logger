@@ -7,7 +7,13 @@ const burger = {
             cb(data);
         });
     },
-}
+    insertOne(newBurger, cb)
+    {
+        orm.insertOne("burgers", newBurger, data=>{
+            cb(data);
+        });
+    }
+};
 
 
 module.exports = burger;
