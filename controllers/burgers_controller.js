@@ -1,10 +1,13 @@
 const express = require("express");
-const burger = require("../models/burger")
+const burger = require("../models/burger.js")
 
 const router = express.Router();  
 
 router.get("/", (req,res)=>{
-    res.send("Yass");
+    const obj = {
+        title: "test"
+    };
+    res.render("index", obj);
 });
 
 module.exports = router;
