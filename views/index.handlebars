@@ -2,12 +2,11 @@
 
 <ul>
     {{#each burgers}}
-        <li>Burger Choice: {{burger_name}}</li>
-        <li>Eaten: {{devoured}}</li>
+        {{>burgers/burger}}
     {{/each}}
 </ul>
 
 <form method="POST">
-    <textarea></textarea>
+    <textarea id="burger_name"></textarea>
     <button>ENTER BURGER</button>
 </form>
