@@ -1,10 +1,30 @@
-<h1>BURGER CHOMPER</h1>
+<section class="row">
+    <h1 class="col-sm-12 text-center">BURGER CHOMPER</h1>
+</section>
 
-<ul>
-    {{#each burgers}}
-        {{>burgers/burger}}
-    {{/each}}
-</ul>
+<section class="row">
+        <img class="col-sm-12 img-thumbnail" src="assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams http://www.fontsquirrel.com/fonts/amatic"/>
+</section>
+<section class="row">
+    <a class="col-sm-12 text-center" href="http://www.freepik.com">Designed by Freepik</a>
+</section>
+
+<section class="row">
+    <article class="col-sm-6">
+        <ul>
+            {{#each burgers}}
+                {{>burgers/burger}}
+            {{/each}}
+        </ul>
+    </article>
+    <article class="col-sm-6">
+        <ul>
+            {{!-- {{#each devouredBurgers}}
+            {{/each}} --}}
+        </ul>
+    </article>
+</section>
+
 
 <form method="POST">
     <textarea id="burger_name"></textarea>
