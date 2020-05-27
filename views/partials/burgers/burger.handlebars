@@ -1,4 +1,7 @@
 <li>
     {{burger_name}}
-    <button data-id={{id}}>DEVOUR!!!</button>
+    {{#if devoured}}
+    {{else}}
+    <button class="devourBtn" data-id={{id}}>DEVOUR!!!</button>
+    {{/if}}
 </li>

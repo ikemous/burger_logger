@@ -12,6 +12,12 @@ const burger = {
         orm.insertOne("burgers", newBurger, data=>{
             cb(data);
         });
+    },
+    updateOne(updatedInformation, burgerId, cb)
+    {
+        orm.updateOne("burgers", updatedInformation, burgerId, data=>{
+            cb(data);
+        });
     }
 };
 

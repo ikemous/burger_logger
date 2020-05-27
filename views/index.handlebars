@@ -13,20 +13,27 @@
     <article class="col-sm-6">
         <ul>
             {{#each burgers}}
-                {{>burgers/burger}}
+                {{#unless devoured}}
+                    {{> burgers/burger}}
+                {{/unless}}
             {{/each}}
         </ul>
     </article>
     <article class="col-sm-6">
         <ul>
-            {{!-- {{#each devouredBurgers}}
-            {{/each}} --}}
+           <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burgers/burger}}
+                {{/if}}
+            {{/each}}
+            </ul>
         </ul>
     </article>
 </section>
 
 
-<form method="POST">
+<form action="/api/burgers" method="POST">
     <textarea name="burger_name"></textarea>
     <button type="submit">ENTER BURGER</button>
 </form>

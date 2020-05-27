@@ -5,4 +5,6 @@ USE burgers_db;
 -- ("BIG CARL"),
 -- ("IN-N-OUT BURGER");
 
+UPDATE burgers SET devoured = true WHERE id = 3;
+
 SELECT * FROM burgers;
