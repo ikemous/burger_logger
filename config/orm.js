@@ -15,6 +15,11 @@ const orm = {
     {
         const query = "UPDATE ?? SET ? WHERE ?";
         connection.query(query, [table, updatedInformation,idInfo], cb);
+    },
+    deleteOne(table, idInfo, cb)
+    {
+        const query = "DELETE FROM ?? WHERE ?";
+        connection.query(query, [table,idInfo], cb);
     }
 
 };

@@ -1,8 +1,8 @@
 <li class="list-group-item burgerItem">
-    {{burger_name}}
+    <p>{{burger_name}}</p>
     {{#if devoured}}
-    <button class="pull-right deleteBtn" data-id={{id}}>DELETE!!!</button>
+        <button class="deleteBtn" data-id={{id}}>DELETE!!!</button>
     {{else}}
-    <button class="pull-right devourBtn" data-id={{id}}>DEVOUR!!!</button>
+        <button class="devourBtn" data-id={{id}}>DEVOUR!!!</button>
     {{/if}}
 </li>

@@ -9,3 +9,12 @@ $(".devourBtn").on("click", function(event){
         location.reload();
     });
 });
+
+$(".deleteBtn").on("click", function(event){
+    const $pressedButton = $(event.target);
+    $.ajax("/api/burgers/" + $pressedButton.data("id"),{
+        method: "DELETE",
+    }).then(function(){
+        location.reload();
+    });
+});
