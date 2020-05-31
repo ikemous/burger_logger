@@ -3,15 +3,16 @@
 </section>
 
 <section class="row">
-        <img class="col-sm-12 img-thumbnail" src="assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams http://www.fontsquirrel.com/fonts/amatic"/>
+        <img class="col-sm-12 img-thumbnail" src="assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6"/>
 </section>
 <section class="row">
-    <a class="col-sm-12 text-center" href="http://www.freepik.com">Designed by Freepik</a>
+    <p class="col-sm-12 text-center">Designed by <a href="https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6" rel="noopener noreferrer" target="_blank">Vernon Adams</a></p>
 </section>
 
 <section class="row">
     <article class="col-sm-6">
-        <ul>
+        <h2 class="text-center">Burgers To Be Chomped</h2>
+        <ul class="list-group">
             {{#each burgers}}
                 {{#unless devoured}}
                     {{> burgers/burger}}
@@ -20,20 +21,28 @@
         </ul>
     </article>
     <article class="col-sm-6">
-        <ul>
-           <ul>
+        <h2 class="text-center">Burgers Chomped</h2>
+        <ul class="list-group">
             {{#each burgers}}
                 {{#if devoured}}
                     {{> burgers/burger}}
                 {{/if}}
             {{/each}}
-            </ul>
         </ul>
     </article>
 </section>
 
-
+<hr />
 <form action="/api/burgers" method="POST">
-    <textarea name="burger_name"></textarea>
-    <button type="submit">ENTER BURGER</button>
+    <article class="row">
+        <section class="col-sm-4"></section>
+        <textarea class="burgerText col-sm-4" placeholder="Enter Burger Name Here" name="burger_name"></textarea>
+        <section class="col-sm-4"></section>
+    </article>
+    <article class="row">
+        <section class="col-sm-5"></section>
+        <button class="burgerButton col-sm-2" type="submit">ENTER BURGER</button>
+        <section class="col-sm-5"></section>
+    </article>
 </form>
+    

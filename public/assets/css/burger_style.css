@@ -4,3 +4,16 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.devourBtn, .deleteBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+}
+
+.burgerItem{
+    min-height: 60px;
+}

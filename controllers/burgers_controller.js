@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get("/", (req,res)=>{
 
-    burger.selectall(data=>{
-
+    burger.selectall((err, data)=>{
+        if(err) throw err;
         const burgers = data.map(burger => {
             const currentBurger = {
                 id: burger.id,
@@ -26,19 +26,24 @@ router.get("/", (req,res)=>{
 router.post("/api/burgers", (req,res)=>{
     // console.log(req.body.burger_name);
     const newBurger = {burger_name: req.body.burger_name};
-    burger.insertOne(newBurger, result=>{
+    burger.insertOne(newBurger, (err, result)=>{
+        if(err) throw err;
         res.redirect("/");
     });
 });
 
 router.put("/api/burgers/:id", (req, res)=>{
-    console.log(newInformation, updatedBurgerId);
-    burger.updateOne(newInformation,updatedBurgerId, result=>{
-        if (result.changedRows === 0) {
+    const newInformation = {devoured:req.body.devoured};
+    const updatedBurgerId = {id: req.params.id}
+    burger.updateOne(newInformation,updatedBurgerId, (err,result)=>{
+        if(err) 
+            return res.status(500).end();
+        else if (result.changedRows === 0) 
+        {
             // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();
-          }
-          res.status(200).end();
+        }
+        res.status(200).end();
     });
 });
 

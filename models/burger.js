@@ -3,9 +3,7 @@ const orm = require("../config/orm.js");
 const burger = {
     selectall(cb)
     {
-        orm.selectAll("burgers", data=>{
-            cb(data);
-        });
+        orm.selectAll("burgers", cb);
     },
     insertOne(newBurger, cb)
     {
@@ -15,9 +13,7 @@ const burger = {
     },
     updateOne(updatedInformation, burgerId, cb)
     {
-        orm.updateOne("burgers", updatedInformation, burgerId, data=>{
-            cb(data);
-        });
+        orm.updateOne("burgers", updatedInformation, burgerId, cb);
     }
 };
 
