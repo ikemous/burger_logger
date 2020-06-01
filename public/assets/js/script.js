@@ -1,6 +1,5 @@
 $(".devourBtn").on("click", function(event){
     const $pressedButton = $(event.target);
-    // console.log($pressedButton.data("id"));
     const ateBurger = {devoured: 1};
     $.ajax("/api/burgers/" + $pressedButton.data("id"),{
         method: "PUT",
@@ -8,6 +7,7 @@ $(".devourBtn").on("click", function(event){
     }).then(function(){
         location.reload();
     });
+    
 });
 
 $(".deleteBtn").on("click", function(event){
@@ -18,3 +18,4 @@ $(".deleteBtn").on("click", function(event){
         location.reload();
     });
 });
+

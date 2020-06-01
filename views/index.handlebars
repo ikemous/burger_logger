@@ -3,36 +3,46 @@
 </section>
 
 <section class="row">
-        <img class="col-sm-12 img-thumbnail" src="assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6"/>
+        <img class="col-sm-12 img-thumbnail" src="/assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6"/>
 </section>
 <section class="row">
-    <p class="col-sm-12 text-center">Designed by <a href="https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6" rel="noopener noreferrer" target="_blank">Vernon Adams</a></p>
+    <p class="col-sm-12 text-center">Image Designed by <a href="https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6" rel="noopener noreferrer" target="_blank">Vernon Adams</a></p>
 </section>
 
 <section class="row">
-    <article class="col-sm-6">
-        <h2 class="text-center">Burgers To Be Chomped</h2>
-        <ul class="list-group">
-            {{#each burgers}}
-                {{#unless devoured}}
-                    {{> burgers/burger}}
-                {{/unless}}
-            {{/each}}
-        </ul>
-    </article>
-    <article class="col-sm-6">
-        <h2 class="text-center">Burgers Chomped</h2>
-        <ul class="list-group">
-            {{#each burgers}}
-                {{#if devoured}}
-                    {{> burgers/burger}}
-                {{/if}}
-            {{/each}}
-        </ul>
-    </article>
+    <section class="col-sm-6">
+        <h2 class="text-center">To Eat</h2>
+        <article>
+            <ul class="list-group">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burger}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </article>
+    </section>
+    <section class="col-sm-6">
+        <h2 class="text-center">Eaten</h2>
+        <article>
+            <ul class="list-group">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burger}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </article>
+    </section>
 </section>
+
 
 <hr />
+
+<section class="row">
+    <h2 class="col-sm-12 text-center">Add A Burger</h1>
+</section>
+
 <form action="/api/burgers" method="POST">
     <article class="row">
         <section class="col-sm-4"></section>
@@ -45,4 +55,7 @@
         <section class="col-sm-5"></section>
     </article>
 </form>
+
+
+
     

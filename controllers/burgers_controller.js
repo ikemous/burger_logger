@@ -24,7 +24,6 @@ router.get("/", (req,res)=>{
 });
 
 router.post("/api/burgers", (req,res)=>{
-    // console.log(req.body.burger_name);
     const newBurger = {burger_name: req.body.burger_name};
     burger.insertOne(newBurger, (err, result)=>{
         if(err) throw err;
@@ -50,7 +49,6 @@ router.put("/api/burgers/:id", (req, res)=>{
 router.delete("/api/burgers/:id", (req, res)=>{
     const deletedBurgerId = {id: req.params.id};
     burger.deleteOne(deletedBurgerId,(err, result)=>{
-        console.log(result);
         if(err) 
             return res.status(500).end();
         else if (result.affectedRows === 0) 
@@ -60,6 +58,10 @@ router.delete("/api/burgers/:id", (req, res)=>{
         }
         res.status(200).end();
     });
+});
+
+router.get("*", (req, res)=>{
+    res.render("404");
 });
 
 module.exports = router;

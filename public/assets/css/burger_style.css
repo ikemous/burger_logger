@@ -3,6 +3,22 @@ body{
     color: white!important;
 }
 
+footer{
+    position: static;
+    bottom: 0;
+}
+
+h1{
+    
+    font-family: 'Cookie', cursive !important;
+    font-weight: bolder!important;
+}
+
+h2{
+    font-family: 'Cookie', cursive !important;
+    /* font-weight: !important; */
+}
+
 button{
     background-color: green;
     border-radius: inherit!important;
@@ -47,4 +63,9 @@ button{
 
 .burgerText{
     resize: none;
+    margin: 5px;
+}
+
+.error{
+    margin-top: 300px;
 }
