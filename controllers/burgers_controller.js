@@ -10,7 +10,7 @@ const router = express.Router();
 */
 router.get("/", (req,res)=>{
     // Grab all information from the database
-    burger.selectall((err, data)=>{
+    burger.selectAll((err, data)=>{
         //Error occured
         if(err) throw err;
         //Put all the burger information into an array
