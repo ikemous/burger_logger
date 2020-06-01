@@ -1,15 +1,18 @@
+<!-- Page Header -->
 <section class="row">
     <h1 class="col-sm-12 text-center">BURGER CHOMPER</h1>
 </section>
-
+<!-- Image Of A Burger For The Page -->
 <section class="row">
         <img class="col-sm-12 img-thumbnail" src="/assets/img/burger.jpg" alt="Image of burger provided by Vernon Adams https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6"/>
 </section>
+<!-- Inform User Who Designed The Image -->
 <section class="row">
     <p class="col-sm-12 text-center">Image Designed by <a href="https://www.freepik.com/free-vector/yellow-background-with-appetizing-burger-flat-design_1140580.htm#page=1&query=burger&position=6" rel="noopener noreferrer" target="_blank">Vernon Adams</a></p>
 </section>
-
+<!-- Row To Hold All Burger Infomation -->
 <section class="row">
+    <!-- Column For The burgers that haven't been devoured -->
     <section class="col-sm-6">
         <h2 class="text-center">To Eat</h2>
         <article>
@@ -22,6 +25,9 @@
             </ul>
         </article>
     </section>
+    <!-- End Column For The burgers that haven't been devoured -->
+    
+    <!-- Column For The burgers that have been devoured -->
     <section class="col-sm-6">
         <h2 class="text-center">Eaten</h2>
         <article>
@@ -34,27 +40,36 @@
             </ul>
         </article>
     </section>
+    <!-- End Column For The burgers that have been devoured -->
+
 </section>
-
-
+<!-- End Row To Hold All Burger Infomation -->
 <hr />
 
+<!-- Header To Display Where To Put The burger Information -->
 <section class="row">
     <h2 class="col-sm-12 text-center">Add A Burger</h1>
 </section>
 
+<!-- Form To Input The Burger Information -->
 <form action="/api/burgers" method="POST">
+
+    <!-- Text Area For Burger Name -->   
     <article class="row">
         <section class="col-sm-4"></section>
         <textarea class="burgerText col-sm-4" placeholder="Enter Burger Name Here" name="burger_name"></textarea>
         <section class="col-sm-4"></section>
     </article>
+    <!-- End Text Area For Burger Name -->
+    <!-- Submit Button To Enter Burger Information -->      
     <article class="row">
         <section class="col-sm-5"></section>
         <button class="burgerButton col-sm-2" type="submit">ENTER BURGER</button>
         <section class="col-sm-5"></section>
     </article>
+    <!--  End Submit Button To Enter Burger Information -->  
 </form>
+<!-- End Form To Input The Burger Information -->
 
 
 
