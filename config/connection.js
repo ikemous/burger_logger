@@ -1,21 +1,26 @@
 // Import Depencies
 const mysql = require("mysql");
-
+let connection;
 /**
  * connection
  * Purpose: To Create a connection to an SQL database
  * Parameters: None
  * Return: None
  */
-const connection = mysql.createConnection(
-    {
+if (process.env.JAWSDB_URL)
+{
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}//End connection
+else
+{
+    connection = mysql.createConnection({
         host: "localhost",
-        port: 3306,
         user: "root",
         password: "secret",
         database: "burgers_db"
-    }
-);//End connection
+    });
+}//End Connection
+
 
 /**
  * connection.connect
